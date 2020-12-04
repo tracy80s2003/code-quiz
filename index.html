@@ -16,20 +16,33 @@
     <body>
 
         <section class="jumbotron">
+            <header>
+                <h1><strong>Welcome to the Coding Quiz Challenge!</strong></h1>
+            </header> 
 
-            <h1 class="text-center">Welcome to the Coding Quiz Challenge!</h1>
+            <h2>Answer the following code-related questions within the time limit.</h2>
 
-            <p class="text-center">Try to answer the following code-related questions within the time limit.</p>
-            
-            <p class="text-center"><em>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</em></p>
-    
-            <p class="text-center">
+            <p><em>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</em></p>
     
             <!-- Button for starting quiz -->
-            <button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
-          
+
+            <p><button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
             </p>
+
+            <h4><span id="iTimeShow">Time Remaining: </span><br/><span id='timer' style="font-size:25px;"></span></h4>
     
+        </section>
+
+        <section id="quizContainer" class="container">
+            <div id="question" class="question"></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
+            <div id="result" class="result"></div>
+                <button class="nextBtn">Next Question</button>
         </section>
 
         <!-- Linking to JavaScript -->

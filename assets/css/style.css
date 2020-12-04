@@ -4,44 +4,78 @@
   box-sizing: border-box;
 }
 
-html, body, .wrapper {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+h1, h2, h4 {
+    text-align: center;
+}
+
+h4 {
+    color:hsl(360, 91%, 36%);
+    position:absolute;left:70%;top:30%;
+
+}
+
 body {
     background-color: #4c6c8d;
+    align-items: center;
+    justify-content: center;
 }
 
 p {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
-.btn {
-    border: none;
+.quizContainer {
+    width: 400px;
+    max-width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.nextButton, .btn {
+    border: 3px solid;
     background-color: hsl(360, 91%, 36%);
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
       0px;
     color: hsl(0, 0%, 100%);
     display: inline-block;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 22px;
     margin: 16px 16px 16px 20px;
     padding: 14px 34px;
     text-align: center;
     cursor: pointer;
-  }
-  
-  button[enabled] {
-    cursor: default;
-    background: #c0c7cf;
-  }
+}
 
-  @media (max-width: 500px) {
+.btn-grid {
+    display: grid;
+    margin: 20px 0;
+}
+  
+button[enabled] {
+    cursor: default;
+}
+
+@media (max-width: 690px) {
+    .btn {
+      font-size: 1rem;
+      margin: 16px 0px 0px 0px;
+      padding: 10px 15px;
+    }
+}
+
+@media (max-width: 500px) {
     .btn {
       font-size: 0.8rem;
     }
-  }
+}
