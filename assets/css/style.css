@@ -28,14 +28,14 @@ p {
 }
 
 .quizContainer {
-    width: 100px;
+    width: 50px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 100px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
 
-.btn, .exitBtn, .contBtn {
+.btn, .exitBtn, .contBtn, .restart, .quit {
     border: 3px solid;
     background-color: hsl(360, 91%, 36%);
     border-radius: 25px;
@@ -63,12 +63,16 @@ button[enabled] {
     cursor: default;
 }
 
-.resultBox {
-    background-color: #FFFFFF;
+/* .resultBox {
+    align-items: center;
+    background: #4c6c8d;
+    color: #FFFFFF;
+    text-align: center;
     width: 450px;
     padding: 25px 30px;
     border-radius: 25px;
-}
+    justify-content: center;
+} */
 
 @media (max-width: 690px) {
     .btn {

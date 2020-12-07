@@ -30,7 +30,7 @@
                     <li class="rules">When you answer the question, you will be presented with the next question.</li>     
                     <li class="rules">If you answer a question incorrectly, the timer will subtract <strong>10 seconds</strong> from the clock.</li>
                     <li class="rules">When all questions are answered OR the timer reaches 0 (zero), the quiz is over.</li>        
-                    <li class="rules">When the quiz is over, you can save your initials and your score.</li>
+                    <li class="rules">When the quiz is over, you can save your initials AND your score.</li>
                 </p>
             </section>
             <hr>
@@ -42,7 +42,7 @@
 
             <!-- Timer -->
             <p class="timeRemaining" id="timeRemaining"><strong>Time Remaining:</strong></p>
-            <p id="timer_seconds">seconds</p>
+            <p id="timer_seconds"><em>seconds</em></p>
             
             <!-- Quiz -->
             <section class = "queTxt">
@@ -51,15 +51,19 @@
             <section class="optionList">
                 <p>
                     <p class="option">Hyper Tracy Mush Langauge</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Hyper Text Processor Langauge</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Hyper Text Markup Langauge</p>
+                    <p class="icon tick"><i class="fas fa-check"></i></p>
                 </p>
                 <p>
                     <p class="option">Hyper Text Main Langauge</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
             </section>
 
@@ -69,15 +73,19 @@
             <section class="optionList">
                 <p>
                     <p class="option">ul</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">u</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">s</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">li</p>
+                    <p class="icon tick"><i class="fas fa-check"></i></p>
                 </p>
             </section>
             <section class = "queTxt">
@@ -86,15 +94,19 @@
             <section class="optionList">
                 <p>
                     <p class="option">Solve</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Count</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Number</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Math</p>
+                    <p class="icon tick"><i class="fas fa-check"></i></p>
                 </p>
             </section>
 
@@ -105,15 +117,19 @@
             <section class="optionList">
                 <p>
                     <p class="option">Arrays</p>
+                    <p class="icon tick"><i class="fas fa-check"></i></p>
                 </p>
                 <p>
                     <p class="option">Functions</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Strings</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Variables</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
             </section>
 
@@ -124,27 +140,36 @@
             <section class="optionList">
                 <p>
                     <p class="option">Conceptual</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Cascading</p>
+                    <p class="icon tick"><i class="fas fa-check"></i></p>
                 </p>
                 <p>
                     <p class="option">Curious</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
                 <p>
                     <p class="option">Clap-worthy</p>
+                    <p class="icon cross"><i class="fas fa-times"></i></p>
                 </p>
             </section>
-
-            <!-- Result Box -->
-            <p class="resultBox">
-                <p>You've completed the quiz!</p>
-            </p>
 
             <!-- Exit Quiz and Continue Buttons -->
             <p class="buttons">
                 <button class="btn" id="exitBtn">Exit Quiz</button>
                 <button class="btn" id="contBtn">Continue</button>
+            </p>
+
+            <!-- Results -->
+            <p class="resultBox">
+            <p id="completeText">You've completed the quiz!</p>
+            <p id="scoreText">You scored 2 out of 5</p>
+            </p>
+            <p class="buttons">
+                <button class="restart">Replay Quiz</button>
+                <button class="quit">Quiz Quiz</button>
             </p>
 
         </section>
