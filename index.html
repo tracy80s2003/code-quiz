@@ -15,6 +15,7 @@
 
     <body>
 
+        <!-- Quiz Header -->
         <section class="jumbotron">
             <header>
                 <h1><strong>Welcome to the Coding Quiz Challenge!</strong></h1>
@@ -32,10 +33,15 @@
                     <li class="rules">When the quiz is over, you can save your initials and your score.</li>
                 </p>
             </section>
+            <hr>
 
-            <p><span id="iTimeShow"><strong>Time Remaining:</strong> </span><br/><span id='timer' style="font-size:25px;"></span></p>
+            <!-- Start Quiz Button -->
+            <p><button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
+            </p>
 
-    
+            <!-- Timer -->
+            <p id="timer"><strong>Time Remaining:</strong></p>
+
         </section>
 
         <section id="quizContainer" class="container">
