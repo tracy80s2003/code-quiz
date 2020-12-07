@@ -1,4 +1,4 @@
-// Variables for questions
+// Variables for questions and answers
 var myQuestions = [
     {
         question: "What does HTML stand for?",

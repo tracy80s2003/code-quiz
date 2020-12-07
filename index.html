@@ -18,163 +18,67 @@
         <!-- Quiz Header -->
         <section class="jumbotron">
             <header>
-                <h1><strong>Welcome to the Coding Quiz Challenge!</strong></h1>
+                <h1 class="display-8"><strong>Welcome to the Coding Quiz Challenge!</strong></h1>
             </header>
-            <hr>
-    
-            <!-- Quiz Rules -->  
-            <section>
-                <p class="quizRules" id="quizRules"><strong>Rules of the Quiz:</strong></p>
-                <p>
-                    <li class="rules">When you click the Start button a timer will start and you will be presented with the first question of the quiz.</li>
-                    <li class="rules">When you answer the question, you will be presented with the next question.</li>     
-                    <li class="rules">If you answer a question incorrectly, the timer will subtract <strong>10 seconds</strong> from the clock.</li>
-                    <li class="rules">When all questions are answered OR the timer reaches 0 (zero), the quiz is over.</li>        
-                    <li class="rules">When the quiz is over, you can save your initials AND your score.</li>
-                </p>
-            </section>
+
             <hr>
 
-            <!-- Start Quiz Button -->
-            <p>
-                <button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
-            </p>
-
-            <!-- Timer -->
-            <p class="timeRemaining" id="timeRemaining"><strong>Time Remaining:</strong></p>
-            <p id="timer_seconds"><em>seconds</em></p>
+            <!-- Quiz Rules --> 
+            <h6 class="quizRules" id="quizRules"><strong>Rules of the Quiz:</strong></h6>
             
-            <!-- Quiz -->
-            <section class = "queTxt">
-                <p>What does HTML stand for?</p>
-            </section>
-            <section class="optionList">
-                <p>
-                    <p class="option">Hyper Tracy Mush Langauge</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Hyper Text Processor Langauge</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Hyper Text Markup Langauge</p>
-                    <p class="icon tick"><i class="fas fa-check"></i></p>
-                </p>
-                <p>
-                    <p class="option">Hyper Text Main Langauge</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-            </section>
+            <p>When you click the Start button a timer will start and you will be presented with the first question of the quiz.</p>
 
-            <section class = "queTxt">
-                <p>What letters in a tag are used to define a list item (in a bulleted list)?</p>
-            </section>
-            <section class="optionList">
-                <p>
-                    <p class="option">ul</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">u</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">s</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">li</p>
-                    <p class="icon tick"><i class="fas fa-check"></i></p>
-                </p>
-            </section>
-            <section class = "queTxt">
-                <p>What is the name of the object that allows you to perform mathematical tasks with the interpreter?</p>
-            </section>
-            <section class="optionList">
-                <p>
-                    <p class="option">Solve</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Count</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Number</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Math</p>
-                    <p class="icon tick"><i class="fas fa-check"></i></p>
-                </p>
-            </section>
+            <p>When you answer the question, you will be presented with the next question.</p>
 
-            <section class = "queTxt">
-                <p>In JavaScript, what element is used to store multiple values in a single variable?
-                </p>
-            </section>
-            <section class="optionList">
-                <p>
-                    <p class="option">Arrays</p>
-                    <p class="icon tick"><i class="fas fa-check"></i></p>
-                </p>
-                <p>
-                    <p class="option">Functions</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Strings</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Variables</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-            </section>
-
-            <section class = "queTxt">
-                <p>CSS stands for ____ Style Sheets.
-                </p>
-            </section>
-            <section class="optionList">
-                <p>
-                    <p class="option">Conceptual</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Cascading</p>
-                    <p class="icon tick"><i class="fas fa-check"></i></p>
-                </p>
-                <p>
-                    <p class="option">Curious</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-                <p>
-                    <p class="option">Clap-worthy</p>
-                    <p class="icon cross"><i class="fas fa-times"></i></p>
-                </p>
-            </section>
-
-            <!-- Exit Quiz and Continue Buttons -->
-            <p class="buttons">
-                <button class="btn" id="exitBtn">Exit Quiz</button>
-                <button class="btn" id="contBtn">Continue</button>
-            </p>
-
-            <!-- Results -->
-            <p class="resultBox">
-            <p id="completeText">You've completed the quiz!</p>
-            <p id="scoreText">You scored 2 out of 5</p>
-            </p>
-            <p class="buttons">
-                <button class="restart">Replay Quiz</button>
-                <button class="quit">Quiz Quiz</button>
-            </p>
-
+            <p>If you answer a question incorrectly, the timer will subtract <strong>10 seconds</strong> from the clock.</p>
+            
+            <p>When all questions are answered OR the timer reaches 0 (zero), the quiz is over.</p>      
+            
+            <p>When the quiz is over, you can save your initials and your score.</p>
+            
+            <hr>
         </section>
 
-        
+
+    
+
+        <!-- Start Quiz Button -->
+        <p>
+            <button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
+        </p>
+
+        <!-- Timer -->
+        <p class="timeRemaining" id="timeRemaining"><strong>Time Remaining:</strong></p>
+
+        <p id="timer_seconds"><em>60 seconds</em></p>
+            
+        <!-- Quiz -->
+        <h6 class="queTxt"></h6>
+
+        <p id="question">Question</p>
+
+        <section class="optionList" id="choices">
+            <p class="option" id="a" onclick="checkAnswer('a')"></p>
+            <p class="option" id="b" onclick="checkAnswer('b')"></p>
+            <p class="option" id="c" onclick="checkAnswer('c')"></p>
+            <p class="option" id="d" onclick="checkAnswer('d')"></p>
+        </section>
+
+        <!-- Exit Quiz and Continue Buttons -->
+        <p class="buttons">
+            <button class="btn" id="exitBtn">Exit Quiz</button>
+            <button class="btn" id="contBtn">Continue</button>
+        </p>
+
+        <!-- Results -->
+        <p class="resultBox"></p>
+        <p id="completeText">You've completed the quiz!</p>
+        <p id="scoreText">You scored 2 out of 5</p>
+            <p class="buttons">
+                <button class="btn" id="restart">Replay Quiz</button>
+                <button class="btn" id="quit">Quiz Quiz</button>
+            </p>
+
 
         <!-- Linking to JavaScript -->
         <script src="script.js"></script>

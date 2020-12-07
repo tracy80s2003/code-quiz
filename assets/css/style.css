@@ -8,17 +8,26 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #4c6c8d;
     align-items: center;
     justify-content: center;
 }
 
-h1, li, p {
+h1, h6, li, p {
     text-align: center;
 }
 
+ul {
+    display: block;
+    margin-left: 75px;
+    margin-right: 0px;
+  }
+
 #quizRules, #timeRemaining {
     color: hsl(360, 91%, 36%);
+}
+
+#timeRemaining, #timer_seconds {
+    display: none;
 }
 
 p {
@@ -51,8 +60,17 @@ p {
     cursor: pointer;
 }
 
+#exitBtn, #contBtn, #restart, #quit {
+    display: none;
+}
+
 .queTxt {
     font-weight: bold;
+    display: none;
+}
+
+#completeText, #scoreText, #question {
+    display: none;
 }
 
 .option {
