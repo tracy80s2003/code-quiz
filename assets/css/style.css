@@ -17,26 +17,25 @@ h1, li, p {
     text-align: center;
 }
 
+#quizRules, #timeRemaining {
+    color: hsl(360, 91%, 36%);
+}
+
 p {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
-#timer {
-    color: hsl(360, 91%, 36%);
-}
-
 .quizContainer {
-    width: 400px;
-    max-width: 50%;
+    width: 100px;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
 
-.btn, .nextButton, .nextButton {
+.btn, .exitBtn, .contBtn {
     border: 3px solid;
     background-color: hsl(360, 91%, 36%);
     border-radius: 25px;
@@ -52,13 +51,23 @@ p {
     cursor: pointer;
 }
 
-.btn-grid {
-    display: grid;
-    margin: 20px 0;
+.queTxt {
+    font-weight: bold;
+}
+
+.option {
+    cursor: pointer;
 }
   
 button[enabled] {
     cursor: default;
+}
+
+.resultBox {
+    background-color: #FFFFFF;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 25px;
 }
 
 @media (max-width: 690px) {

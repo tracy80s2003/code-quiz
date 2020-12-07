@@ -23,12 +23,12 @@
             <hr>
     
             <!-- Quiz Rules -->  
-            <section class="quiz_rules">
-                <p class="quiz_rules_title"><strong>Rules of the Quiz:</strong></p>
-                <p class="rules_list">
+            <section>
+                <p class="quizRules" id="quizRules"><strong>Rules of the Quiz:</strong></p>
+                <p>
                     <li class="rules">When you click the Start button a timer will start and you will be presented with the first question of the quiz.</li>
                     <li class="rules">When you answer the question, you will be presented with the next question.</li>     
-                    <li class="rules">If you answer a question incorrectly, the timer will subtract 10 seconds from the clock.</li>
+                    <li class="rules">If you answer a question incorrectly, the timer will subtract <strong>10 seconds</strong> from the clock.</li>
                     <li class="rules">When all questions are answered OR the timer reaches 0 (zero), the quiz is over.</li>        
                     <li class="rules">When the quiz is over, you can save your initials and your score.</li>
                 </p>
@@ -41,27 +41,113 @@
             </p>
 
             <!-- Timer -->
-            <p id="timer"><strong>Time Remaining:</strong></p>
-
-            <section id="quizContainer" class="container">
-                <div class="buttons" class="buttons"></div>
-                <div id="answer-buttons" class="btn-grid">
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                </div>
+            <p class="timeRemaining" id="timeRemaining"><strong>Time Remaining:</strong></p>
+            <p id="timer_seconds">seconds</p>
+            
+            <!-- Quiz -->
+            <section class = "queTxt">
+                <p>What does HTML stand for?</p>
+            </section>
+            <section class="optionList">
+                <p>
+                    <p class="option">Hyper Tracy Mush Langauge</p>
+                </p>
+                <p>
+                    <p class="option">Hyper Text Processor Langauge</p>
+                </p>
+                <p>
+                    <p class="option">Hyper Text Markup Langauge</p>
+                </p>
+                <p>
+                    <p class="option">Hyper Text Main Langauge</p>
+                </p>
             </section>
 
-            <p class="buttons">
-                <button class="exitBtn">Exit Quiz</button>
-                <button class="nextBtn">Next Question</button>
+            <section class = "queTxt">
+                <p>What letters in a tag are used to define a list item (in a bulleted list)?</p>
+            </section>
+            <section class="optionList">
+                <p>
+                    <p class="option">ul</p>
+                </p>
+                <p>
+                    <p class="option">u</p>
+                </p>
+                <p>
+                    <p class="option">s</p>
+                </p>
+                <p>
+                    <p class="option">li</p>
+                </p>
+            </section>
+            <section class = "queTxt">
+                <p>What is the name of the object that allows you to perform mathematical tasks with the interpreter?</p>
+            </section>
+            <section class="optionList">
+                <p>
+                    <p class="option">Solve</p>
+                </p>
+                <p>
+                    <p class="option">Count</p>
+                </p>
+                <p>
+                    <p class="option">Number</p>
+                </p>
+                <p>
+                    <p class="option">Math</p>
+                </p>
+            </section>
+
+            <section class = "queTxt">
+                <p>In JavaScript, what element is used to store multiple values in a single variable?
+                </p>
+            </section>
+            <section class="optionList">
+                <p>
+                    <p class="option">Arrays</p>
+                </p>
+                <p>
+                    <p class="option">Functions</p>
+                </p>
+                <p>
+                    <p class="option">Strings</p>
+                </p>
+                <p>
+                    <p class="option">Variables</p>
+                </p>
+            </section>
+
+            <section class = "queTxt">
+                <p>CSS stands for ____ Style Sheets.
+                </p>
+            </section>
+            <section class="optionList">
+                <p>
+                    <p class="option">Conceptual</p>
+                </p>
+                <p>
+                    <p class="option">Cascading</p>
+                </p>
+                <p>
+                    <p class="option">Curious</p>
+                </p>
+                <p>
+                    <p class="option">Clap-worthy</p>
+                </p>
+            </section>
+
+            <!-- Result Box -->
+            <p class="resultBox">
+                <p>You've completed the quiz!</p>
             </p>
 
+            <!-- Exit Quiz and Continue Buttons -->
+            <p class="buttons">
+                <button class="btn" id="exitBtn">Exit Quiz</button>
+                <button class="btn" id="contBtn">Continue</button>
+            </p>
 
         </section>
-
-
 
         
 
