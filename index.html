@@ -36,25 +36,34 @@
             <hr>
 
             <!-- Start Quiz Button -->
-            <p><button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
+            <p>
+                <button id="startBtn" type="button" name="button" class="btn">Start Quiz</button>
             </p>
 
             <!-- Timer -->
             <p id="timer"><strong>Time Remaining:</strong></p>
 
+            <section id="quizContainer" class="container">
+                <div class="buttons" class="buttons"></div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </div>
+            </section>
+
+            <p class="buttons">
+                <button class="exitBtn">Exit Quiz</button>
+                <button class="nextBtn">Next Question</button>
+            </p>
+
+
         </section>
 
-        <section id="quizContainer" class="container">
-            <div id="question" class="question"></div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
-            </div>
-            <div id="result" class="result"></div>
-                <button class="nextBtn">Next Question</button>
-        </section>
+
+
+        
 
         <!-- Linking to JavaScript -->
         <script src="script.js"></script>

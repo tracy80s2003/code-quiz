@@ -8,16 +8,13 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #4c6c8d;
+    align-items: center;
+    justify-content: center;
 }
 
 h1, li, p {
     text-align: center;
-}
-
-body {
-    background-color: #4c6c8d;
-    align-items: center;
-    justify-content: center;
 }
 
 p {
@@ -39,7 +36,7 @@ p {
     box-shadow: 0 0 10px 2px;
 }
 
-.nextButton, .btn {
+.btn, .nextButton, .nextButton {
     border: 3px solid;
     background-color: hsl(360, 91%, 36%);
     border-radius: 25px;
