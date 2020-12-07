@@ -10,13 +10,12 @@ html, body {
     padding: 0;
 }
 
-h1, h2, h4 {
+h1, h2, h4, li {
     text-align: center;
 }
 
 h4 {
     color:hsl(360, 91%, 36%);
-    position:absolute;left:70%;top:30%;
 
 }
 
