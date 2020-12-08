@@ -42,7 +42,7 @@ p {
     box-shadow: 0 0 10px 2px;
 }
 
-.btn, .exitBtn, .contBtn, .restart, .quit {
+.btn, .exitBtn, .contBtn, .restart, .quit, .option {
     border: 3px solid;
     background-color: hsl(360, 91%, 36%);
     border-radius: 25px;
@@ -58,21 +58,13 @@ p {
     cursor: pointer;
 }
 
-#exitBtn, #contBtn, #restart, #quit {
-    display: none;
+#exitBtn, #contBtn, #restart, #quit, #completeText, #scoreText {
+    visibility: hidden;
 }
 
 .queTxt {
     font-weight: bold;
-    display: none;
-}
-
-#completeText, #scoreText, #question {
-    /* display: none; */
-}
-
-.option {
-    cursor: pointer;
+    visibility: hidden;
 }
   
 button[enabled] {

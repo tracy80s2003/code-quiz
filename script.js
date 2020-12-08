@@ -58,15 +58,15 @@ var myQuestions = [
   var timer_seconds = document.getElementById('timer_seconds');
   var questionEl = document.getElementById('question');
   var currentQuestion = 0
+  var currentOptions = 0
   var optionA = document.getElementById('a');
   var optionB = document.getElementById('b');
   var optionC = document.getElementById('c');
   var optionD = document.getElementById('d');
-
-//   generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
   
   function beginQuiz(){
-    currentQuestion=0  
+    currentQuestion=0
+    currentOptions=0
     startTimer()
       showNextQuestion()
   }
@@ -77,7 +77,6 @@ var myQuestions = [
         timeRemaining--;
         timer_seconds.textContent=timeRemaining
         if (timeRemaining<=0||currentQuestion>myQuestions.length){
-            console.log('time over')
             clearInterval(interval)
         }
     },1000)
@@ -85,7 +84,6 @@ var myQuestions = [
 
   function showNextQuestion(){
       if(currentQuestion >= myQuestions.length){
-          console.log("quiz is over by length")
       }else{
           questionEl.textContent = myQuestions[currentQuestion].question
           optionA.textContent = myQuestions[currentQuestion].answers.a
@@ -98,12 +96,20 @@ var myQuestions = [
 
   function handleAnswer(){
       if (this.textContent==myQuestions[currentQuestion-1].correctAnswer){
-          console.log('correct!')
       }else{
-          console.log('incorrect')
       }
       showNextQuestion()
   }
+
+//   const result = {userName: user, score: timeScore}
+
+//   const savedScores = localStorage.getItem('score') || '[]' // get the score, or the initial value if empty
+  
+//   const highscores = [...JSON.parse(savedScores), result] // add the result
+//     .sort((a, b) => b.score- a.score) // sort descending
+//     .slice(0, 5) // take highest 5
+  
+//   localStorage.setItem('highscore', JSON.stringify(highscores)) // store the scores
 
   startBtn.addEventListener('click', beginQuiz)
   optionA.addEventListener('click', handleAnswer)
