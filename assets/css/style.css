@@ -12,23 +12,21 @@ html, body {
     justify-content: center;
 }
 
-h1, h6, li, p {
+h1, h6, p {
     text-align: center;
 }
 
-ul {
-    display: block;
-    margin-left: 75px;
-    margin-right: 0px;
-  }
+h1 {
+    padding-bottom: 10px;
+}
 
 #quizRules, #timeRemaining {
     color: hsl(360, 91%, 36%);
 }
 
-#timeRemaining, #timer_seconds {
+/* #timeRemaining, #timer_seconds {
     display: none;
-}
+} */
 
 p {
     font-size: 16px;
@@ -70,7 +68,7 @@ p {
 }
 
 #completeText, #scoreText, #question {
-    display: none;
+    /* display: none; */
 }
 
 .option {

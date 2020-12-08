@@ -20,27 +20,22 @@
             <header>
                 <h1 class="display-8"><strong>Welcome to the Coding Quiz Challenge!</strong></h1>
             </header>
-
-            <hr>
-
-            <!-- Quiz Rules --> 
-            <h6 class="quizRules" id="quizRules"><strong>Rules of the Quiz:</strong></h6>
-            
-            <p>When you click the Start button a timer will start and you will be presented with the first question of the quiz.</p>
-
-            <p>When you answer the question, you will be presented with the next question.</p>
-
-            <p>If you answer a question incorrectly, the timer will subtract <strong>10 seconds</strong> from the clock.</p>
-            
-            <p>When all questions are answered OR the timer reaches 0 (zero), the quiz is over.</p>      
-            
-            <p>When the quiz is over, you can save your initials and your score.</p>
-            
-            <hr>
         </section>
 
+        <!-- Quiz Rules --> 
+        <h6 class="quizRules" id="quizRules"><strong>Rules of the Quiz:</strong></h6>
+                    
+        <p>When you click the Start button a timer will start and you will be presented with the first question of the quiz.</p>
 
-    
+        <p>When you answer the question, you will be presented with the next question.</p>
+
+        <p>If you answer a question incorrectly, the timer will subtract <strong>10 seconds</strong> from the clock.</p>
+
+        <p>When all questions are answered OR the timer reaches 0 (zero), the quiz is over.</p>      
+
+        <p>When the quiz is over, you can save your initials and your score.</p>
+
+        <hr>
 
         <!-- Start Quiz Button -->
         <p>
@@ -50,7 +45,7 @@
         <!-- Timer -->
         <p class="timeRemaining" id="timeRemaining"><strong>Time Remaining:</strong></p>
 
-        <p id="timer_seconds"><em>60 seconds</em></p>
+        <p id="timer_seconds"><em>120 seconds</em></p>
             
         <!-- Quiz -->
         <h6 class="queTxt"></h6>
@@ -58,10 +53,10 @@
         <p id="question">Question</p>
 
         <section class="optionList" id="choices">
-            <p class="option" id="a" onclick="checkAnswer('a')"></p>
-            <p class="option" id="b" onclick="checkAnswer('b')"></p>
-            <p class="option" id="c" onclick="checkAnswer('c')"></p>
-            <p class="option" id="d" onclick="checkAnswer('d')"></p>
+            <button class="option" id="a">Test</button>
+            <button class="option" id="b">Test</button>
+            <button class="option" id="c">Test</button>
+            <button class="option" id="d">Test</button>
         </section>
 
         <!-- Exit Quiz and Continue Buttons -->

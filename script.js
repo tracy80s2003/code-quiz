@@ -8,7 +8,7 @@ var myQuestions = [
             c: 'Hyper Text Markup Langauge',
             d: 'Hyper Text Main Langauge'
     },
-        correctAnswer: 'c'
+        correctAnswer: 'Hyper Text Markup Langauge'
     },
     {
         question: "What letters in a tag are used to define a list item (in a bulleted list)?",
@@ -18,7 +18,7 @@ var myQuestions = [
             c: 's',
             d: 'li'
     },
-        correctAnswer: 'd'
+        correctAnswer: 'li'
     },
     {
         question: "What is the name of the object that allows you to perform mathematical tasks with the interpreter?",
@@ -28,7 +28,7 @@ var myQuestions = [
             c: 'Number',
             d: 'Math'
         },
-        correctAnswer: 'd'
+        correctAnswer: 'Math'
     },
     {
         question: "In JavaScript, what element is used to store multiple values in a single variable?",
@@ -38,7 +38,7 @@ var myQuestions = [
             c: 'Strings',
             d: 'Variables'
         },
-        correctAnswer: 'a'
+        correctAnswer: 'Arrays'
     },
     {
         question: "CSS stands for ____ Style Sheets.",
@@ -48,94 +48,65 @@ var myQuestions = [
             c: 'Curious',
             d: 'Clap-worthy'
         },
-        correctAnswer: 'b'
+        correctAnswer: 'Cascading'
     }
   ];
   
   var quizContainer = document.getElementById('quiz');
   var resultsContainer = document.getElementById('results');
-  var submitButton = document.getElementById('submit');
+  var startBtn = document.getElementById('startBtn');
+  var timer_seconds = document.getElementById('timer_seconds');
+  var questionEl = document.getElementById('question');
+  var currentQuestion = 0
+  var optionA = document.getElementById('a');
+  var optionB = document.getElementById('b');
+  var optionC = document.getElementById('c');
+  var optionD = document.getElementById('d');
+
+//   generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
   
-  generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
-  
-  function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-  
-    function showQuestions(questions, quizContainer){
-      // we'll need a place to store the output and the answer choices
-      var output = [];
-      var answers;
-  
-      // for each question...
-      for(var i=0; i<questions.length; i++){
-        
-        // first reset the list of answers
-        answers = [];
-  
-        // for each available answer...
-        for(letter in questions[i].answers){
-  
-          // ...add an html radio button
-          answers.push(
-            '<label>'
-              + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-              + letter + ': '
-              + questions[i].answers[letter]
-            + '</label>'
-          );
-        }
-  
-        // add this question and its answers to the output
-        output.push(
-          '<div class="question">' + questions[i].question + '</div>'
-          + '<div class="answers">' + answers.join('') + '</div>'
-        );
-      }
-  
-      // finally combine our output list into one string of html and put it on the page
-      quizContainer.innerHTML = output.join('');
-    }
-  
-  
-    function showResults(questions, quizContainer, resultsContainer){
-      
-      // gather answer containers from our quiz
-      var answerContainers = quizContainer.querySelectorAll('.answers');
-      
-      // keep track of user's answers
-      var userAnswer = '';
-      var numCorrect = 0;
-      
-      // for each question...
-      for(var i=0; i<questions.length; i++){
-  
-        // find selected answer
-        userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-        
-        // if answer is correct
-        if(userAnswer===questions[i].correctAnswer){
-          // add to the number of correct answers
-          numCorrect++;
-          
-          // color the answers green
-          answerContainers[i].style.color = 'lightgreen';
-        }
-        // if answer is wrong or blank
-        else{
-          // color the answers red
-          answerContainers[i].style.color = 'red';
-        }
-      }
-  
-      // show number of correct answers out of total
-      resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-    }
-  
-    // show questions right away
-    showQuestions(questions, quizContainer);
-    
-    // on submit, show results
-    submitButton.onclick = function(){
-      showResults(questions, quizContainer, resultsContainer);
-    }
-  
+  function beginQuiz(){
+    currentQuestion=0  
+    startTimer()
+      showNextQuestion()
   }
+
+  function startTimer(){
+    var timeRemaining = 120
+    var interval = setInterval(function (){
+        timeRemaining--;
+        timer_seconds.textContent=timeRemaining
+        if (timeRemaining<=0||currentQuestion>myQuestions.length){
+            console.log('time over')
+            clearInterval(interval)
+        }
+    },1000)
+  }
+
+  function showNextQuestion(){
+      if(currentQuestion >= myQuestions.length){
+          console.log("quiz is over by length")
+      }else{
+          questionEl.textContent = myQuestions[currentQuestion].question
+          optionA.textContent = myQuestions[currentQuestion].answers.a
+          optionB.textContent = myQuestions[currentQuestion].answers.b
+          optionC.textContent = myQuestions[currentQuestion].answers.c
+          optionD.textContent = myQuestions[currentQuestion].answers.d
+        }
+        currentQuestion++
+    }
+
+  function handleAnswer(){
+      if (this.textContent==myQuestions[currentQuestion-1].correctAnswer){
+          console.log('correct!')
+      }else{
+          console.log('incorrect')
+      }
+      showNextQuestion()
+  }
+
+  startBtn.addEventListener('click', beginQuiz)
+  optionA.addEventListener('click', handleAnswer)
+  optionB.addEventListener('click', handleAnswer)
+  optionC.addEventListener('click', handleAnswer)
+  optionD.addEventListener('click', handleAnswer)
